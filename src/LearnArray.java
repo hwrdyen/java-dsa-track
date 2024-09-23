@@ -24,6 +24,20 @@ public class LearnArray {
 //            System.out.println(i);
 //        }
 
+        // search elements = 7
+        System.out.println("arrayExample 2:");
+        int index = -1;
+        for (int i = 0; i < intArray.length; i++) {
+            if (intArray[i] == 7) {
+                index = i;
+                break;
+            }
+        }
+        System.out.println("index = " + index);
+        // worst case:
+        // would be 7 is the last item in the array,
+        // so we have to search for the whole array to find 7
+        // then we have to loop intArray.length times
     }
 
 }
