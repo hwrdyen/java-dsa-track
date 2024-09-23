@@ -4,6 +4,7 @@ public class Main {
 
         System.out.println("Hello world! Main!");
 
+        // === Section 2 Array ===
         LearnArray.print();
         LearnArray.arrayExample();
     }
