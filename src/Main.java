@@ -13,6 +13,6 @@ public class Main {
 //        LearnSortAlgo.bubbleSortExample();
 //        LearnSortAlgo.selectionSortExample();
 //        LearnSortAlgo.insertionSortExample();
-
+        LearnSortAlgo.shellSortExample();
     }
 }
