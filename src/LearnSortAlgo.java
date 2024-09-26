@@ -33,7 +33,6 @@ public class LearnSortAlgo {
         }
     }
 
-
     public static void selectionSortExample() {
         System.out.println(" --- Selection Sort --- ");
         int[] intArray = {20, 35, -15, 7, 55, 1, -22};
@@ -104,6 +103,58 @@ public class LearnSortAlgo {
             System.out.println(num);
         }
     }
+
+    // recursion:
+    // 1! = 1 * 0! = 1
+    // 2! = 2 * 1 = 2 * 1!
+    // 3! = 3 * 2 * 1 = 3 * 2!
+    // 4! = 4 * 3 * 2 * 1 = 4 * 3!
+    // n! = n * (n-1)!
+    public static int recursiveFactorial(int num) {
+        if (num == 0) {
+            return 1;
+        } // breaking condition / base case is required to unwind!
+
+        // Ex.
+        // num = 3
+        // "call stack" will look like -->
+        // step 1. recursiveFactorial(3)
+        // step 2. recursiveFactorial(2)
+        //         recursiveFactorial(3)
+        // step 3. recursiveFactorial(1)
+        //         recursiveFactorial(2)
+        //         recursiveFactorial(3)
+        // then recursiveFactorial(0) return 1, recursiveFactorial(1) got popped off the call stack
+        // step 4. recursiveFactorial(2)
+        //         recursiveFactorial(3)
+        // step 5. recursiveFactorial(3)
+        // return value
+
+        return num * recursiveFactorial(num - 1);
+    }
+
+    // not using recursive implementation:
+    public static int iterativeFactorial (int num) {
+        if (num == 0) {
+            return 1;
+        }
+
+        int factorial = 1;
+        for (int i = 1; i <= num; i++) {
+            factorial *= i;
+        }
+
+        // Exx.
+        // num = 3
+        // inside for-loop:
+        //      int i = 1 ==> factorial * 1 = 1
+        //      int i = 2 ==> factorial * 2 = 1 * 2 = 2
+        //      int i = 3 ==> factorial * 3 = 2 * 3 = 6
+        // ==> num = 3, factorial = 6
+
+        return factorial;
+    }
+
     public static void swap(int[] array, int i, int j) {
         if (i == j) {
             return;

@@ -13,6 +13,8 @@ public class Main {
 //        LearnSortAlgo.bubbleSortExample();
 //        LearnSortAlgo.selectionSortExample();
 //        LearnSortAlgo.insertionSortExample();
-        LearnSortAlgo.shellSortExample();
+//        LearnSortAlgo.shellSortExample();
+//        System.out.println(LearnSortAlgo.recursiveFactorial(3));
+//        System.out.println(LearnSortAlgo.iterativeFactorial(3));
     }
 }
