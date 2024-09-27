@@ -155,6 +155,62 @@ public class LearnSortAlgo {
         return factorial;
     }
 
+    public static void mergeSortExample() {
+        System.out.println(" --- Merge Sort --- ");
+        int[] intArray = {20, 35, -15, 7, 55, 1, -22};
+
+        mergeSort(intArray, 0, intArray.length);
+
+        for (int num : intArray) {
+            System.out.println(num);
+        }
+    }
+    public static void mergeSort(int[] input, int start, int end) {
+        // end is always one grader than the last valid index of the partition that you wanna sort
+        if (end - start < 2) {
+            return; // if we only have a one element array, then break the recursion
+        }
+
+        int mid = (start + end) / 2; // partition the array
+
+        mergeSort(input, start, mid); // complete process the left side
+        mergeSort(input, mid, end); // complete process the right side
+        merge(input, start, mid, end); // By the time we call this merge, the left and right partition have been fully handled (partitioned and merged)
+    }
+
+    public static void merge(int[] input, int start, int mid, int end) {
+        // 1st optimization:
+        if (input[mid - 1] <= input[mid]) {
+            return;
+            // mid is the first element in the right side
+            // it's one greater than the last element in the left side
+            // input[mid - 1]: last element in the left partition
+            // input[mid]: first element in the right partition
+            // if (input[mid - 1] <= input[mid]) then all element on the left side is smaller than the right side because both array are sorted already
+        }
+
+        // Merge Process
+        int i = start;
+        int j = mid;
+        int tempIndex = 0;
+
+        int[] temp = new int[end - start];
+        while (i < mid && j < end) {
+            temp[tempIndex++] = input[i] <= input[j] ? input[i++] : input[j++];
+        }
+
+        // 2nd optimization:
+        // we don't need to worry about the last element that is left inside the right array
+        // because {32, 34}, {33, 36} ==> {32, 33, 34} and 36 is left, but it is still the largest and the index position will not changed
+        // but this is not the case for the last element that is left inside the left array
+        // for example: {32, 36}, {33, 34} ==> {32, 33, 34, 36} and 36 is required to be put inside the temp array because the position index isn't same as its original index
+        System.arraycopy(input, i, input, start+tempIndex, mid-i);
+        // we dont copy any left-over elements in the "left" partition into the temp array, we copy directly into where they end up in the input array
+        // if there's left-over elements in the "right" partition, then we dont do anything
+
+        // back to Merge Process
+        System.arraycopy(temp, 0, input, start, tempIndex);
+    }
     public static void swap(int[] array, int i, int j) {
         if (i == j) {
             return;
