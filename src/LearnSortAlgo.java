@@ -211,6 +211,53 @@ public class LearnSortAlgo {
         // back to Merge Process
         System.arraycopy(temp, 0, input, start, tempIndex);
     }
+
+    public static void quickSortExample() {
+        System.out.println(" --- Quick Sort --- ");
+        int[] intArray = {20, 35, -15, 7, 55, 1, -22};
+
+        quickSort(intArray, 0, intArray.length);
+
+        for (int num : intArray) {
+            System.out.println(num);
+        }
+    }
+
+    public static void quickSort(int[] input, int start, int end) {
+        if (end - start < 2) {
+            return;
+        }
+
+        int pivotIndex = partition(input, start, end); // return the position element in the sorted array, in other words -- position at the pivot
+        quickSort(input, start, pivotIndex);
+        quickSort(input, pivotIndex+1, end);
+    }
+
+    public static int partition(int[] input, int start, int end) {
+        // This is using the first element as the pivot
+        int pivot = input[start];
+        int i = start;
+        int j = end;
+
+        while (i < j) {
+
+            // NOTE: Empty loop body
+            while (i < j && input[--j] >= pivot); // NOTE: [--j] is prefix increment operator ==> when we execute this statement, we'll decrement j first and use the result
+            if (i < j) {
+                input[i] = input[j];
+            }
+
+            while (i < j && input[++i] <= pivot); // NOTE: the while loop has a semicolon (;) at the end, making it an empty loop. The loop increments i while the condition i < j && input[++i] <= pivot holds, but it doesn't execute any code inside the loop body. After the loop finishes, if i < j is still true, only then the assignment input[j] = input[i]; will occur once.
+            if (i < j) {
+                input[j] = input[i];
+            }
+
+        }
+
+        input[j] = pivot;
+        return j;
+    }
+
     public static void swap(int[] array, int i, int j) {
         if (i == j) {
             return;

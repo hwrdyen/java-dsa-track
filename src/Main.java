@@ -17,5 +17,6 @@ public class Main {
 //        System.out.println(LearnSortAlgo.recursiveFactorial(3));
 //        System.out.println(LearnSortAlgo.iterativeFactorial(3));
 //        LearnSortAlgo.mergeSortExample();
+//        LearnSortAlgo.quickSortExample();
     }
 }
