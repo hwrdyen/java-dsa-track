@@ -258,6 +258,33 @@ public class LearnSortAlgo {
         return j;
     }
 
+    public static void countingSortExample() {
+        int[] intArray = {2, 5, 9, 8, 2, 8, 7, 10, 4, 3};
+
+        countingSort(intArray, 1, 10);
+
+        for (int num: intArray) {
+            System.out.println(num);
+        }
+    }
+
+    public static void countingSort(int[] input, int min, int max) {
+        int[] countArray = new int[(max-min) + 1]; // assume min=1; max=10, then (max-min) + 1 = 10 ==> equals to possible 10 values
+
+        for (int i = 0; i < input.length; i++) {
+            countArray[input[i] - min]++; //input[i] - min: need to transfer value from 10 to 20 --> indicies 0 to 10
+        }
+
+        int j = 0;
+        for (int i = min; i <= max; i++) {
+            while(countArray[i - min] > 0) {
+                input[j++] = i;
+                countArray[i - min] --;
+            }
+        }
+
+    }
+
     public static void swap(int[] array, int i, int j) {
         if (i == j) {
             return;
