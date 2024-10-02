@@ -22,5 +22,8 @@ public class Main {
 //        LearnSortAlgo.radixSortExample();
 
 //        LearnSortJDK.sortJDKExample();
+//        LearnSortJDK.sortChallengeOne();
+//        LearnSortJDK.sortChallengeTwo();
+        LearnSortJDK.sortChallengeThree();
     }
 }
