@@ -259,6 +259,7 @@ public class LearnSortAlgo {
     }
 
     public static void countingSortExample() {
+        System.out.println(" --- Counting Sort --- ");
         int[] intArray = {2, 5, 9, 8, 2, 8, 7, 10, 4, 3};
 
         countingSort(intArray, 1, 10);
@@ -283,6 +284,57 @@ public class LearnSortAlgo {
             }
         }
 
+    }
+
+    public static void radixSortExample() {
+        System.out.println(" --- Radix Sort --- ");
+        int[] radixArray = {4725, 4586, 1330, 8792, 1594, 5729};
+
+        radixSort(radixArray, 10, 4);
+
+        for (int num: radixArray) {
+            System.out.println(num);
+        }
+    }
+
+    public static void radixSort(int[] input, int radix, int width) {
+        for (int i = 0; i < width; i++) {
+            // i = position
+            radixSingleSort(input, i, radix);
+        }
+    }
+
+    public static void radixSingleSort(int[] input, int position, int radix) {
+        int numItems = input.length; // how many items we are sorting
+        int[] countArray = new int[radix];
+
+        for (int value: input) {
+            countArray[getDigit(position, value, radix)]++;
+        }
+
+        // Adjust the count array --> so it now contains the value that have that digit or less than that digit
+        for (int j = 1; j < radix; j++) {
+            // we dont have to worry about number in the zero index because the number of values that have zero or one position are gonna be the number of values that have zero
+            countArray[j] += countArray[j - 1];
+        }
+
+        int[] temp = new int[numItems];
+        for (int tempIndex = numItems - 1; tempIndex >= 0; tempIndex--) {
+            temp[--countArray[getDigit(position, input[tempIndex], radix)]] = input[tempIndex];
+        }
+
+        for (int tempIndex = 0; tempIndex < numItems; tempIndex++) {
+            input[tempIndex] = temp[tempIndex];
+        }
+    }
+
+    public static int getDigit(int position, int value, int radix) {
+        return value / (int) Math.pow(radix, position) % radix;
+        // For Example:
+        // if position = 0 (right-most), radix always equal to 10 (as it's decimal digit)
+        // (4756 / 10^0) % 10 = 6 ==> value at 1's position
+        // if position = 1,
+        // (4756 / 10^1) % 10 = 5 ==> value at 10's position
     }
 
     public static void swap(int[] array, int i, int j) {
