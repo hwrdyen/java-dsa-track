@@ -24,6 +24,12 @@ public class Main {
 //        LearnSortJDK.sortJDKExample();
 //        LearnSortJDK.sortChallengeOne();
 //        LearnSortJDK.sortChallengeTwo();
-        LearnSortJDK.sortChallengeThree();
+//        LearnSortJDK.sortChallengeThree();
+
+        // === Section 4 Lists ===
+//        LearnList.arrayListExample();
+//        LearnList.vectorExample();
+//        LearnList.singleLinkedListExample();
+//        LearnList.doubleLinkedListExample();
     }
 }
