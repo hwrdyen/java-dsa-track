@@ -31,5 +31,9 @@ public class Main {
 //        LearnList.vectorExample();
 //        LearnList.singleLinkedListExample();
 //        LearnList.doubleLinkedListExample();
+
+//        LearnListJDK.JDKLinkedListExample();
+//        LearnListJDK.listChallengeOne();
+//        LearnListJDK.listChallengeTwo();
     }
 }

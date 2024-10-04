@@ -31,6 +31,38 @@ public class EmployeeDoubleLinkedList {
         size++;
     }
 
+    public boolean addBefore (Employee newEmployee, Employee exisitngEmployee) {
+        // Return true if you were able to successfully add the employee into the list before the existing employee
+        // Return false if the existing employee doesn't exist in the list
+
+        if (isEmpty()) {
+            return false;
+        }
+
+        // find the existing employee
+        EmployeeDoubleNode current = head;
+        while (current != null && !current.getEmployee().equals(exisitngEmployee)) {
+            current = current.getNext();
+        }
+
+        if (current == null) {
+            return false; // the existing employee doesn't exist
+        }
+
+        EmployeeDoubleNode newNode = new EmployeeDoubleNode(newEmployee);
+        newNode.setPrevious(current.getPrevious());
+        newNode.setNext(current);
+        current.setPrevious(newNode);
+        if (head == current) {
+            head = newNode;
+        } else {
+            newNode.getPrevious().setNext(newNode);
+        }
+
+        size++;
+        return true;
+    }
+
     public EmployeeDoubleNode removeFromFront() {
         if (isEmpty()) {
             return null;
