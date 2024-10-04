@@ -1,4 +1,10 @@
-import java.util.*;
+import LinkedList.Employee;
+import LinkedList.EmployeeDoubleLinkedList;
+import LinkedList.EmployeeLinkedList;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
 
 public class LearnList {
 
@@ -26,7 +32,7 @@ public class LearnList {
 //        employeeList.forEach(employee -> System.out.println(employee));
 
         Employee[] employeeArray = employeeList.toArray(new Employee[employeeList.size()]);
-//        for (Employee employee: employeeArray) {
+//        for (LinkedList.Employee employee: employeeArray) {
 //            System.out.println(employee);
 //        }
 
@@ -61,7 +67,7 @@ public class LearnList {
 //        employeeList.forEach(employee -> System.out.println(employee));
 
         Employee[] employeeArray = employeeList.toArray(new Employee[employeeList.size()]);
-//        for (Employee employee: employeeArray) {
+//        for (LinkedList.Employee employee: employeeArray) {
 //            System.out.println(employee);
 //        }
 

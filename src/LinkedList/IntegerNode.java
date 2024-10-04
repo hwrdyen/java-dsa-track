@@ -1,3 +1,5 @@
+package LinkedList;
+
 public class IntegerNode {
 
     private Integer value;

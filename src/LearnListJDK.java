@@ -1,6 +1,9 @@
+import LinkedList.Employee;
+import LinkedList.EmployeeDoubleLinkedList;
+import LinkedList.IntegerLinkedList;
+
 import java.util.Iterator;
 import java.util.LinkedList;
-
 public class LearnListJDK {
     public static void JDKLinkedListExample() {
         System.out.println("--- JDK Linked List ---");
@@ -59,7 +62,7 @@ public class LearnListJDK {
 
     public static void listChallengeOne() {
         // CHALLENGE #1
-        // Implement the addBefore() method for the EmployeeDoubleLinkedList class
+        // Implement the addBefore() method for the LinkedList.EmployeeDoubleLinkedList class
         // Use the starter project in the resources section
         // Project contains all the code you need and an empty addBefore() method
         // Main method contains code that should work when you're finished
@@ -90,10 +93,10 @@ public class LearnListJDK {
     public static void listChallengeTwo() {
         // CHALLENGE #1
         // Use the starter project in the resources section
-        // Implement a method in the IntegerLinkedList class that inserts a value in sorted order
+        // Implement a method in the LinkedList.IntegerLinkedList class that inserts a value in sorted order
         // Lower values should appear first in the list (be closer to the head)
         // If we insert 4, 2, 1, 5, list should look like HEAD --> 1 --> 2 --> 4 --> 5 --> null
-        // IntegerLinkedList is a singly-linked list
+        // LinkedList.IntegerLinkedList is a singly-linked list
         // Project contains all the code you need and an empty insertSorted() method
         // Main method contains code that should work when you're finished
 

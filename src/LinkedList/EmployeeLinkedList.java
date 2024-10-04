@@ -1,3 +1,5 @@
+package LinkedList;
+
 public class EmployeeLinkedList {
     private EmployeeNode head;
     private int size;

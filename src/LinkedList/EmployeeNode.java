@@ -1,3 +1,5 @@
+package LinkedList;
+
 public class EmployeeNode {
     private Employee employee;
     private EmployeeNode next;

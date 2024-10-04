@@ -1,3 +1,5 @@
+package LinkedList;
+
 import java.util.Objects;
 
 public class Employee {
@@ -50,7 +52,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee {" +
+        return "LinkedList.Employee {" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", id=" + id +
