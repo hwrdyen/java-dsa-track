@@ -35,5 +35,10 @@ public class Main {
 //        LearnListJDK.JDKLinkedListExample();
 //        LearnListJDK.listChallengeOne();
 //        LearnListJDK.listChallengeTwo();
+
+        // === Section 5 Stacks ===
+//        LearnStack.arrayStackExample();
+//        LearnStack.linkedlistStackExample();
+        LearnStack.stackChallengeOne();
     }
 }
