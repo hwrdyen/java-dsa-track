@@ -70,6 +70,7 @@ public class LearnStack {
     }
     public static boolean checkForPalindrome(String string) {
         LinkedList<Character> stack = new LinkedList<Character>();
+//        Stack<Character> stack = new Stack<Character>();
         StringBuilder stringNoPunctionation = new StringBuilder(string.length());
         String lowerCase = string.toLowerCase();
 
@@ -80,7 +81,7 @@ public class LearnStack {
                 stack.push(c);
             }
         }
-        System.out.println(stringNoPunctionation);
+//        System.out.println(stringNoPunctionation);
 
         // reversedString
         StringBuilder reversedString = new StringBuilder(stack.size());

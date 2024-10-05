@@ -39,6 +39,9 @@ public class Main {
         // === Section 5 Stacks ===
 //        LearnStack.arrayStackExample();
 //        LearnStack.linkedlistStackExample();
-        LearnStack.stackChallengeOne();
+//        LearnStack.stackChallengeOne();
+
+        // === Section 6 Queue ===
+        LearnQueue.arrayQueueExample();
     }
 }
