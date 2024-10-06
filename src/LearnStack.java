@@ -58,17 +58,17 @@ public class LearnStack {
         System.out.println("--- Challenge One ---");
 
         // should return true
-        System.out.println(checkForPalindrome("abccba"));
+        System.out.println(checkForPalindromeStack("abccba"));
         // should return true
-        System.out.println(checkForPalindrome("Was it a car or a cat I saw?"));
+        System.out.println(checkForPalindromeStack("Was it a car or a cat I saw?"));
         // should return true
-        System.out.println(checkForPalindrome("I did, did I?"));
+        System.out.println(checkForPalindromeStack("I did, did I?"));
         // should return false
-        System.out.println(checkForPalindrome("hello"));
+        System.out.println(checkForPalindromeStack("hello"));
         // should return true
-        System.out.println(checkForPalindrome("Don't nod"));
+        System.out.println(checkForPalindromeStack("Don't nod"));
     }
-    public static boolean checkForPalindrome(String string) {
+    public static boolean checkForPalindromeStack(String string) {
         LinkedList<Character> stack = new LinkedList<Character>();
 //        Stack<Character> stack = new Stack<Character>();
         StringBuilder stringNoPunctionation = new StringBuilder(string.length());

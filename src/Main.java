@@ -2,8 +2,6 @@
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Hello world! Main!");
-
         // === Section 2 Array ===
 //        LearnArray.print();
 //        LearnArray.arrayExample();
@@ -42,6 +40,8 @@ public class Main {
 //        LearnStack.stackChallengeOne();
 
         // === Section 6 Queue ===
-        LearnQueue.arrayQueueExample();
+//        LearnQueue.arrayQueueExample(); // Current: repetitively add one, remove one, add one, remove one --> its going to increase queue size when the element numbers are not more than queue length because start element is not set back to index 0 when remove()
+//        LearnQueue.arrayCircularQueueExample(); // Utilized: repetitively add one, remove one, add one, remove one --> will not resize queue if the element numbers are not more than queue length
+//        LearnQueue.queueChallengeOne();
     }
 }
