@@ -46,6 +46,7 @@ public class Main {
 
         // === Section 7 Hashtable ===
 //        LearnHashtables.simpleHashtableExample();
-        LearnHashtables.linearProbingHashtableExample();
+//        LearnHashtables.linearProbingHashtableExample();
+        LearnHashtables.chainingHashtableExample();
     }
 }
