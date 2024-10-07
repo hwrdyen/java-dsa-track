@@ -49,6 +49,8 @@ public class Main {
 //        LearnHashtables.linearProbingHashtableExample();
 //        LearnHashtables.chainingHashtableExample();
 
-        LearnHashtablesJDK.hashMapJDKExample();
+//        LearnHashtablesJDK.bucketSortExample();
+//        LearnHashtablesJDK.hashmapChallengeOne();
+//        LearnHashtablesJDK.hashmapChallengeTwo();
     }
 }
