@@ -52,5 +52,10 @@ public class Main {
 //        LearnHashtablesJDK.bucketSortExample();
 //        LearnHashtablesJDK.hashmapChallengeOne();
 //        LearnHashtablesJDK.hashmapChallengeTwo();
+
+        // === Section 8 Search Algorithm ===
+//        LearnSearchAlgo.linearSearchExample();
+//        LearnSearchAlgo.binarySearchIterativeExample();
+//        LearnSearchAlgo.binarySearchRecursiveExample();
     }
 }
