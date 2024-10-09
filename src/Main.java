@@ -62,6 +62,11 @@ public class Main {
 //        LearnTrees.binarySearchTreeExample();
 //        LearnTrees.treeJDKExample();
 //        LearnTrees.binarySearchTreeChallengeOne();
+
+        // === Section 10 Heaps ===
+//        LearnHeaps.heapsExample();
+//        LearnHeaps.priorityQueueExample();
+//        LearnHeaps.heapSortExample();
     }
 
 }
