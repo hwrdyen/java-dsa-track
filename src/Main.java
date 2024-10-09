@@ -57,5 +57,11 @@ public class Main {
 //        LearnSearchAlgo.linearSearchExample();
 //        LearnSearchAlgo.binarySearchIterativeExample();
 //        LearnSearchAlgo.binarySearchRecursiveExample();
+
+        // === Section 9 Trees ===
+//        LearnTrees.binarySearchTreeExample();
+//        LearnTrees.treeJDKExample();
+//        LearnTrees.binarySearchTreeChallengeOne();
     }
+
 }
